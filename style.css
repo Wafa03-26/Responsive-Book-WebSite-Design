@@ -386,20 +386,26 @@ header.navbar a{
     margin: 0 0 .5rem;
 }
 .products .box-container .box .content .price{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
     font-size: 1.2rem;
     color: #000;
     font-weight: 700;
-
-    font-weight: bolder;
-    padding-top:1rem;
+    padding-top: 1rem;
 }
 
-.products .box-container .box .content .price span{
+.products .box-container .box .content .price .current{
+    color: var(--pink);
     font-size: 1.5rem;
+}
+
+.products .box-container .box .content .price .original{
+    font-size: 1.2rem;
     color: #999;
     text-decoration: line-through;
-    font-weight: lighter;
-    
+    font-weight: 400;
 }
 
 
