@@ -112,6 +112,11 @@ header.navbar a{
     z-index: 1;
     max-width: 50rem;
 }
+.home .fade-in{
+    animation: fadeIn 1.8s ease-out;
+    background-size: cover;
+    background-position: center;
+}
 
 .home-content h3{
     font-size: 4rem;
@@ -494,6 +499,15 @@ header.navbar a{
 
 
 /*media */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes slideDown {
     from {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
