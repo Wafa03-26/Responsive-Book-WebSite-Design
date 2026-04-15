@@ -414,18 +414,6 @@ header.navbar a{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .review .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -476,6 +464,118 @@ header.navbar a{
 .review .box-container .box .user span{
     font-size: 1rem;
     color: #999;
+}
+
+.contact .row{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+}
+.contact .row form,
+.contact .row .image{
+    flex: 1 1 0;
+    min-width: 0;
+}
+.contact .row form{
+    padding: 2rem 2.5rem;   
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.1);
+    border: .1rem solid rgba(0,0,0,0.1);
+    border-radius: .5rem;
+}
+.contact .row img{
+    width:100%;
+}
+.contact .row .content{
+    flex: 1 1 40rem;
+}
+.contact .row form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size:1.7rem;
+    color:#333;
+    text-transform: none;
+    margin: 1.7rem 0;
+    border: .1rem solid rgba(0,0,0,0.1);
+    border-radius: .5rem;
+}
+.contact .row form .box:focus{
+    border-color: var(--pink);
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 0;
+
+}
+.footer .box-container .box{
+    flex : 1 1 25rem;
+}
+.footer .box-container .box h3{
+    color :#333;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+.footer .box-container .box a{
+    display:block;
+    color :#666;
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+}
+.footer .box-container .box .payment-methods{
+    margin-top: 1.5rem;
+}
+.footer .box-container .box .payment-methods span{
+    display: block;
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+.footer .box-container .box .payment-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+.footer .box-container .box .payment-icons i,
+.footer .box-container .box .payment-icons .cmi-label{
+    font-size: 2rem;
+    color: #333;
+}
+.footer .box-container .box .payment-icons .cmi-label{
+    padding: 0.6rem 1rem;
+    border: .1rem solid rgba(0,0,0,0.1);
+    border-radius: .7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.footer .box-container .box img{
+    margin-top: 2rem;
+}
+.footer .credit{
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    border-top: .1rem solid rgba(0,0,0,0.1);
+}
+.footer .credit span{
+    color: var(--pink);
+
 }
 
 
