@@ -101,7 +101,7 @@ header.window-scroll {
     justify-content: flex-start;
     position: relative;
     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.25)),
-        url('/assets/Images/book-cover.jpeg') center/cover no-repeat;
+        url('/book-store/assets/images/book-cover.jpeg') center/cover no-repeat;
     color: #fff;
     margin-top: 6rem;
     padding: 2rem 9%;
