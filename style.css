@@ -10,6 +10,13 @@
     text-transform: capitalize;
     transition: .2s  linear;
 }
+/* --- Colors for Light Theme (Default) --- */
+:root {
+  --body-color: #fdfdfd;
+  --title-color: #19191b;
+  --text-color: #5b5b5d;
+  --container-color: #ffffff;
+}
 
 
 html{
@@ -18,17 +25,28 @@ html{
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
-/* Variables Dark theme */
+/* --- Colors for Dark Theme --- */
 body.dark-theme {
-  --first-color-second: hsl(var(--hue), 54%, 12%);
-  --title-color: hsl(var(--hue), 8%, 95%);
-  --text-color: hsl(var(--hue), 8%, 75%);
-  --body-color: hsl(var(--hue), 54%, 8%);
-  --container-color: hsl(var(--hue), 54%, 12%);
+  --body-color: #121212;
+  --title-color: #f1f1f2;
+  --text-color: #abb2bf;
+  --container-color: #1d1d1f;
+}
+
+/* --- Apply variables to your elements --- */
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .4s; /* Smooth transition when switching */
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
 }
 section{
     padding: 2rem 9%;
 }
+
 header{
     position : fixed;
     top:0; left:0; right:0;
@@ -85,6 +103,7 @@ header  .fa-bars{
     border: .1rem solid rgba(0, 0, 0, 0.3);
     display: none;
 }
+
 /* Style mobile menu links */
 header.navbar a{
     margin:1.5rem ;
@@ -110,7 +129,7 @@ header.window-scroll {
     justify-content: flex-start;
     position: relative;
     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.25)),
-        url('assets/images/book-cover.jpeg') center/cover no-repeat;
+        url('/book-store/assets/images/book-cover.jpeg') center/cover no-repeat;
     color: #fff;
     margin-top: 6rem;
     padding: 2rem 9%;
