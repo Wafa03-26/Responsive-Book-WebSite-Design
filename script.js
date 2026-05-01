@@ -16,26 +16,31 @@ const header = document.querySelector('header');
         observer.observe(section);
       });
 
+/*=============== DARK LIGHT THEME ===============*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
-const iconTheme = 'ri-sun-line' // Icon to show when in Dark Mode
+const iconTheme = 'ri-sun-line' // L'icône qui s'affiche en mode sombre
 
-// 1. Check if user previously chose a theme
+// Thème précédemment sélectionné (si l'utilisateur a déjà visité le site)
 const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
 
+// On récupère le thème actuel de la page en vérifiant la classe dark-theme
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+// On applique le thème précédent si existant
 if (selectedTheme) {
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
 }
 
-// 2. Activate / deactivate the theme manually with the button
+// Activer / désactiver le thème manuellement avec le bouton
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark theme class
+    // Ajoute ou retire la classe dark-theme sur le body
     document.body.classList.toggle(darkTheme)
-    
-    // Save the theme choice in local storage
+    themeButton.classList.toggle(iconTheme)
+    // On sauvegarde le choix de l'utilisateur
     localStorage.setItem('selected-theme', getCurrentTheme())
-    themeButton.classList.toggle('ri-moon-line')
-    themeButton.classList.toggle('ri-sun-line')
+    localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
